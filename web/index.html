@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="毎日の聞き取りドリル。音声を聞いて、問題を解いて、採点がつく小学生〜中学生向けトレーニング。全400パターン・800問、音声つき。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232a3a5c'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23fff' font-family='Hiragino Mincho ProN, serif'%3E聞%3C/text%3E%3C/svg%3E">
+<title>super-dictation-jp — 毎日の聞き取りドリル</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=11">
+<script src="data.js"></script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="./index.html">
+    <span class="brand-mark" aria-hidden="true">聞</span>
+    <span class="brand-text">super-dictation-jp</span>
+  </a>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="ライト・ダークを切り替える"></button>
+</header>
+
+<main class="home">
+  <section class="today" aria-labelledby="todayTitle">
+    <p class="today-date" id="todayDate"></p>
+    <h1 class="today-stamp-line" id="todayTitle">きょうの採点</h1>
+    <div class="today-body">
+      <div class="stamp-slot stamp-slot-xl" id="todayStamp">
+        <span class="stamp is-void">・</span>
+      </div>
+      <ul class="today-figures">
+        <li class="figure">
+          <strong class="figure-num" id="todayScore">—</strong>
+          <span class="figure-cap">きょうの平均</span>
+        </li>
+        <li class="figure">
+          <strong class="figure-num" id="pastScore">—</strong>
+          <span class="figure-cap">昨日までの平均</span>
+        </li>
+      </ul>
+    </div>
+    <p class="today-hint is-done" id="todayHint" hidden></p>
+  </section>
+
+  <section class="levels" aria-labelledby="levelsTitle">
+    <h2 class="levels-lead" id="levelsTitle">レベルを一つえらぼう</h2>
+    <ul class="level-list" id="levelList"></ul>
+    <div class="start-row">
+      <button class="start-btn" id="startBtn" type="button" disabled>
+        <span class="start-label">このレベルで始める</span>
+        <span class="start-arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="demo-link" id="demoBtn" type="button">音声つきデモ(声あり 5問)</button>
+    </div>
+  </section>
+
+  <section class="history" aria-labelledby="historyTitle">
+    <h2 class="history-title" id="historyTitle">もんだいのきおく</h2>
+    <ul class="history-days" id="historyDays"></ul>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <p>学習の記録は、この端末の IndexedDB に保存されます。</p>
+</footer>
+
+<script src="assets/js/db.js?v=11"></script>
+<script src="assets/js/theme.js?v=11"></script>
+<script src="assets/js/app.js?v=11"></script>
+</body>
+</html>

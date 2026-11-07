@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="音声を聞いて解く、聞き取りドリルの問題ページ。こたえを入れて、その場で採点します。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232a3a5c'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23fff' font-family='Hiragino Mincho ProN, serif'%3E聞%3C/text%3E%3C/svg%3E">
+<title>もんだい — super-dictation-jp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=11">
+<script src="data.js"></script>
+</head>
+<body data-page="quiz">
+<header class="site-head quiz-head">
+  <a class="brand brand-back" id="backLink" href="./index.html">
+    <span class="brand-back-arrow" aria-hidden="true">←</span>
+    <span class="brand-text">ホーム</span>
+  </a>
+  <p class="quiz-progress" id="progress"><span id="progressNum"></span></p>
+  <div class="hud" id="hud" hidden aria-label="ここまでの点数">
+    <div class="hud-cells" id="hudCells"></div>
+    <p class="hud-score">いま <strong id="hudScore">0</strong> 点</p>
+  </div>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="ライト・ダークを切り替える"></button>
+</header>
+
+<main class="quiz" id="main">
+  <p class="quiz-loading" id="loading">もんだいをよみこんでいます…</p>
+</main>
+
+<template id="stampT"></template>
+
+<script src="assets/js/db.js?v=11"></script>
+<script src="assets/js/theme.js?v=11"></script>
+<script src="assets/js/quiz.js?v=11"></script>
+</body>
+</html>
